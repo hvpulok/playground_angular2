@@ -1,4 +1,20 @@
 <h2>This is Game-1</h2>
-<p appHighlighter>
-  Here we will be testing attribute directives.
+<p [appHighlighter] = "color" >
+  Highlighted by parent attribute input
 </p>
+
+<p>
+  Without Highlighter!
+</p>
+
+<p appHighlighter [defaultColor]="color">
+  Highlighted by fallback color
+</p>
+
+
+<div>
+  <span (click)="color = 'red'"><input type="radio" name="inputColor" >Red </span>
+  <span (click)="color = 'green'"><input type="radio" name="inputColor" >Green </span>
+  <span (click)="color = 'blue'"><input type="radio" name="inputColor" >Blue </span>
+
+</div>
